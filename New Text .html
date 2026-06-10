@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Rincon - Resume</title>
+    <style>
+        :root {
+            --primary: #000000;
+            --accent-heading: #2D588B;
+            /* Darker blue for Section Headers */
+            --accent-job: #2D65EF;
+            /* Brighter blue for Companies/Titles */
+            --text-dark: #000000;
+            --text-light: #333333;
+            --font-family: 'Georgia', 'Times New Roman', serif;
+            --font-family-sans: 'Arial', sans-serif;
+            --spacing-section: 4px;
+        }
+
+        @page {
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.21;
+            color: var(--text-dark);
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            font-size: 10pt;
+            /* Match PDF density, slightly smaller to fit 1 page */
+        }
+
+        /* --- HEADER --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 2px solid var(--accent-heading);
+            padding-bottom: 2px;
+            margin-bottom: var(--spacing-section);
+        }
+
+        .header-left h1 {
+            color: var(--text-dark);
+            font-size: 20pt;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .header-left .subtitle {
+            color: var(--accent-job);
+            font-size: 12pt;
+            font-family: var(--font-family);
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 8pt;
+            font-family: var(--font-family-sans);
+        }
+
+        .header-right a {
+            color: var(--accent-heading);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 2px;
+        }
+
+        .header-icon {
+            width: 12px;
+            height: 12px;
+            margin-right: 6px;
+            fill: currentColor;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            margin-bottom: 6px;
+        }
+
+        h2 {
+            font-family: var(--font-family-sans);
+            font-size: 9.5pt;
+            color: var(--accent-heading);
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--accent-heading);
+            padding-bottom: 1px;
+            margin-bottom: 3px;
+            margin-top: 6px;
+            font-weight: bold;
+        }
+
+        /* --- SUMMARY --- */
+        .summary p {
+            text-align: justify;
+            font-size: 9.5pt;
+            line-height: 1.21;
+        }
+
+        /* --- EXPERIENCE --- */
+        .experience-item {
+            margin-bottom: 5px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .item-title-left {
+            font-size: 10pt;
+        }
+
+        .company-name {
+            color: var(--accent-heading);
+            font-weight: bold;
+        }
+
+        .pipe-separator {
+            color: var(--accent-job);
+            margin: 0 4px;
+        }
+
+        .job-title {
+            color: var(--accent-job);
+            font-weight: bold;
+        }
+
+        .date-right {
+            font-family: var(--font-family-sans);
+            font-weight: bold;
+            font-size: 9pt;
+        }
+
+        ul {
+            padding-left: 15px;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        li {
+            font-size: 9.5pt;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+
+        /* --- BOLD TEXT IN LISTS --- */
+        strong {
+            font-weight: bold;
+        }
+
+        /* --- EDUCATION --- */
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2px;
+            font-size: 9.5pt;
+        }
+
+        .edu-left {
+            color: var(--accent-heading);
+        }
+
+        .edu-right {
+            font-family: var(--font-family-sans);
+            font-weight: bold;
+            font-size: 9pt;
+        }
+
+        /* --- SKILLS --- */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px 15px;
+            font-size: 9pt;
+        }
+
+        .skills-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skills-title {
+            color: var(--accent-heading);
+            font-weight: bold;
+            font-family: var(--font-family-sans);
+            margin-bottom: 2px;
+        }
+
+        .skills-list {
+            font-size: 9pt;
+            line-height: 1.2;
+        }
+
+        /* --- CERTIFICATIONS & LANGUAGES --- */
+        .two-col-list {
+            display: flex;
+            justify-content: space-between;
+            font-size: 9.5pt;
+            font-weight: bold;
+        }
+
+        .two-col-list div {
+            width: 48%;
+        }
+
+        /* Print adjustments */
+        @media print {
+            body {
+                padding: 0.3in 0.4in;
+                margin: 0;
+            }
+
+            .header-right a {
+                color: var(--accent-heading) !important;
+            }
+
+            /* Force exact colors in print */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            @page {
+                size: letter;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <h1>Christian Rincon</h1>
+            <div class="subtitle">Senior Software Engineer</div>
+        </div>
+        <div class="header-right">
+            <a href="mailto:christian.r.m.job@gmail.com">
+                <svg class="header-icon" viewBox="0 0 24 24">
+                    <path
+                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+                christian.r.m.job@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/christian-rincon-dev">
+                <svg class="header-icon" viewBox="0 0 24 24">
+                    <path
+                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-1.85 0-2.58 1.02-3 1.66v-1.42H8.35v8.32h3.89v-4.64c0-.25.05-.5.12-.68.2-.5.66-1.02 1.43-1.02 1 0 1.41.77 1.41 1.9v4.44h3.8zM6.55 9.04c1.23 0 2.01-.81 2.01-1.83C8.54 6.17 7.78 5.4 6.57 5.4c-1.22 0-2.01.77-2.01 1.81 0 1.02.77 1.83 1.97 1.83h.02zM4.6 18.5h3.89v-8.32H4.6v8.32z" />
+                </svg>
+                linkedin.com/in/christian-rincon-dev
+            </a>
+        </div>
+    </header>
+
+    <section class="summary">
+        <h2>SUMMARY</h2>
+        <p><strong>Senior Software Engineer</strong> with <strong>7+ years of experience</strong> specializing in
+            <strong>scalable backend architectures</strong>, high-throughput systems, and
+            <strong>AI-augmented development</strong>. Expert in <strong>Python, JavaScript/TypeScript, and Go</strong>
+            ecosystems, with a proven track record of leading high-impact initiatives from legacy transformations to
+            modern microservices. Adept at navigating technical ambiguity, driving cross-functional alignment, and
+            integrating <strong>LLM-assisted workflows (Gemini)</strong> that accelerated production cycles by
+            <strong>~30%</strong>. Strategic leader focused on engineering velocity, team scalability, and delivering
+            robust data-driven solutions.
+        </p>
+    </section>
+
+    <section>
+        <h2>EXPERIENCE</h2>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title-left">
+                    <span class="company-name">GlobalLogic</span><span class="pipe-separator">|</span><span
+                        class="job-title">Senior Software Engineer</span>
+                </div>
+                <div class="date-right">May 2023 - Present</div>
+            </div>
+            <ul>
+                <li><strong>Acted as the technical anchor</strong> for a <strong>real-time ticketing metadata
+                        layer</strong>, guiding implementation strategies that transitioned a legacy daily-batch process
+                    to <strong>immediate execution</strong>, eliminating <strong>24-hour latency</strong>.</li>
+                <li><strong>Stepped in as a vanguard Senior Engineer</strong> to support an understaffed, critical
+                    ticketing platform; mastering its <strong>Go (Golang)</strong> and <strong>Angular</strong> stack to
+                    unblock core features and establishing <strong>Knowledge Transfers (KT)</strong> to accelerate team
+                    onboarding.</li>
+                <li><strong>Designed high-throughput RESTful APIs</strong> and a <strong>declarative YAML configuration
+                        engine</strong> that dynamically maps user inputs into <strong>100+ metadata fields</strong>,
+                    ensuring system scalability and eliminating hardcoded logic.</li>
+                <li><strong>Engineered event-driven JS notification triggers</strong> while leveraging
+                    <strong>AI-assisted workflows</strong> to accelerate feature delivery by <strong>~30%</strong>,
+                    mentoring junior developers on debugging and long-term codebase stability.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title-left">
+                    <span class="company-name">ApexSystems</span><span class="pipe-separator">|</span><span
+                        class="job-title">Senior Software Engineer</span>
+                </div>
+                <div class="date-right">May 2022 - May 2023</div>
+            </div>
+            <ul>
+                <li><strong>Spearheaded</strong> the frontend development of a high-traffic Knowledge Management System
+                    for a <strong>Big 4 client</strong>, implementing a reusable <strong>React component
+                        library</strong> that <strong>reduced UI development time</strong> by <strong>~25%</strong>.
+                </li>
+                <li><strong>Drove</strong> architectural decisions to ensure scalability, <strong>aligning engineering
+                        teams</strong> with emerging <strong>AI/ML
+                        infrastructure</strong> and ensuring technical consistency.</li>
+                <li>Maintained <strong>99.9% application stability</strong> during critical audit seasons by
+                    implementing <strong>strict code quality gates</strong> and collaborating closely with backend teams
+                    on data integrity.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title-left">
+                    <span class="company-name">GoSharp</span><span class="pipe-separator">|</span><span
+                        class="job-title">Senior Software Engineer</span>
+                </div>
+                <div class="date-right">May 2021 - May 2022</div>
+            </div>
+            <ul>
+                <li><strong>Designed and engineered</strong> scalable backend services in <strong>TypeScript</strong>
+                    and <strong>Python
+                        (Django)</strong>, supporting <strong>enterprise AI/ML workloads</strong> and
+                    <strong>establishing API design patterns</strong>.
+                </li>
+                <li>Designed secure <strong>REST APIs</strong> for internal and external consumption, enabling seamless
+                    integration with client systems.</li>
+                <li><strong>Improved</strong> client-facing load times by <strong>35%</strong> through
+                    <strong>architectural redesign</strong> and backend optimization.
+                </li>
+                <li>Optimized <strong>Angular</strong> frontend via lazy loading, improving Time-to-Interactive (TTI) by
+                    <strong>~40%</strong>.
+                </li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title-left">
+                    <span class="company-name">Independent Study & Certification</span><span
+                        class="pipe-separator">|</span><span class="job-title">Data Science & Software
+                        Engineering</span>
+                </div>
+                <div class="date-right">Jan 2019 - Apr 2021</div>
+            </div>
+            <ul>
+                <li>Completed the IBM Data Science Professional Certificate, building a strong foundation in AI/ML and
+                    data analysis which directly contributed to successfully securing a backend engineering role focused
+                    on enterprise AI/ML workloads.</li>
+                <li>Undertook continuous self-directed learning across various platforms to modernize full-stack
+                    development skills and prepare for advanced senior roles.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title-left">
+                    <span class="company-name">Universidad Autónoma de Coahuila</span><span
+                        class="pipe-separator">|</span><span class="job-title">Professor of Computer Science</span>
+                </div>
+                <div class="date-right">Jan 2018 - Dec 2018</div>
+            </div>
+            <ul>
+                <li>Designed and delivered technical curricula for <strong>graduate students</strong>, covering
+                    <strong>Software Architecture, Databases,</strong> and <strong>Version Control (Git)</strong> while
+                    mentoring on engineering best practices.
+                </li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title-left">
+                    <span class="company-name">Torneofire</span><span class="pipe-separator">|</span><span
+                        class="job-title">Software Engineer</span>
+                </div>
+                <div class="date-right">Jul 2015 - Dec 2016</div>
+            </div>
+            <ul>
+                <li><strong>Engineered Torneofire user services from 0 to 1</strong>, developing RESTful APIs and social features using <strong>Node.js/MongoDB</strong>, boosting
+                    engagement by <strong>~20%</strong>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>EDUCATION</h2>
+        <div class="education-item">
+            <div class="edu-left">Universidad Autónoma de Coahuila <span style="color:var(--text-dark)">| M.S. Computer
+                    Science (GPA: 92/100)</span></div>
+            <div class="edu-right">Dec 2018</div>
+        </div>
+        <div class="education-item">
+            <div class="edu-left">Universidad Autónoma de Coahuila <span style="color:var(--text-dark)">| B.S. Computer
+                    Science</span></div>
+            <div class="edu-right">Jul 2015</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>SKILLS</h2>
+        <div class="skills-container">
+            <div class="skills-group">
+                <div class="skills-title">Languages</div>
+                <div class="skills-list">Python, TypeScript, JavaScript (ES6+), SQL, Go.</div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-title">Cloud & DevOps</div>
+                <div class="skills-list">Google Cloud Platform (GCP), CI/CD pipelines.</div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-title">Backend & Frameworks</div>
+                <div class="skills-list">Django, Node.js (Express), REST APIs, Microservices.</div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-title">Frontend</div>
+                <div class="skills-list">React, Angular, Vue.js, HTML5/CSS3.</div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-title">Testing & Tools</div>
+                <div class="skills-list">Jasmine, Unit Testing, Git.</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>CERTIFICATIONS</h2>
+        <div class="two-col-list">
+            <div>Google Cloud Associate Cloud Engineer (ACE)</div>
+            <div>IBM Data Science Professional Certificate</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>LANGUAGES</h2>
+        <div class="two-col-list">
+            <div>English <span style="color:var(--accent-job)">C1</span></div>
+            <div>Spanish <span style="color:var(--accent-job)">Native</span></div>
+        </div>
+    </section>
+
+</body>
+
+</html>
