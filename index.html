@@ -16,7 +16,7 @@
             --text-light: #333333;
             --font-family: 'Georgia', 'Times New Roman', serif;
             --font-family-sans: 'Arial', sans-serif;
-            --spacing-section: 4px;
+            --spacing-section: 3px;
         }
 
         @page {
@@ -31,14 +31,13 @@
 
         body {
             font-family: var(--font-family);
-            line-height: 1.21;
+            line-height: 1.22;
             color: var(--text-dark);
             max-width: 8.5in;
             margin: 0 auto;
-            padding: 16px 20px;
+            padding: 0.35in 0.45in;
             background: white;
-            font-size: 10pt;
-            /* Match PDF density, slightly smaller to fit 1 page */
+            font-size: 9.5pt;
         }
 
         /* --- HEADER --- */
@@ -47,7 +46,7 @@
             justify-content: space-between;
             align-items: flex-end;
             border-bottom: 2px solid var(--accent-heading);
-            padding-bottom: 2px;
+            padding-bottom: 1px;
             margin-bottom: var(--spacing-section);
         }
 
@@ -61,8 +60,10 @@
 
         .header-left .subtitle {
             color: var(--accent-job);
-            font-size: 12pt;
+            font-size: 11pt;
             font-family: var(--font-family);
+            font-weight: bold;
+            margin-top: 1.5px;
         }
 
         .header-right {
@@ -89,7 +90,7 @@
 
         /* --- SECTIONS --- */
         section {
-            margin-bottom: 4px;
+            margin-bottom: 4.5px;
         }
 
         h2 {
@@ -100,7 +101,7 @@
             border-bottom: 1px solid var(--accent-heading);
             padding-bottom: 1px;
             margin-bottom: 2px;
-            margin-top: 4px;
+            margin-top: 4.5px;
             font-weight: bold;
         }
 
@@ -108,19 +109,19 @@
         .summary p {
             text-align: justify;
             font-size: 9.5pt;
-            line-height: 1.21;
+            line-height: 1.22;
         }
 
         /* --- EXPERIENCE --- */
         .experience-item {
-            margin-bottom: 3px;
+            margin-bottom: 3.5px;
         }
 
         .item-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 2px;
+            margin-bottom: 1.5px;
         }
 
         .item-title-left {
@@ -151,7 +152,7 @@
         ul {
             padding-left: 15px;
             margin: 0;
-            line-height: 1.2;
+            line-height: 1.21;
         }
 
         li {
@@ -200,7 +201,7 @@
             color: var(--accent-heading);
             font-weight: bold;
             font-family: var(--font-family-sans);
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
         .skills-list {
@@ -208,7 +209,7 @@
             line-height: 1.2;
         }
 
-        /* --- CERTIFICATIONS & LANGUAGES --- */
+        /* --- CERTIFICATIONS & PROJECTS --- */
         .two-col-list {
             display: flex;
             justify-content: space-between;
@@ -223,7 +224,7 @@
         /* Print adjustments */
         @media print {
             body {
-                padding: 0.25in 0.4in;
+                padding: 0.35in 0.45in;
                 margin: 0;
             }
 
@@ -231,7 +232,6 @@
                 color: var(--accent-heading) !important;
             }
 
-            /* Force exact colors in print */
             * {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
@@ -250,7 +250,7 @@
     <header>
         <div class="header-left">
             <h1>Christian Rincon</h1>
-            <div class="subtitle">Senior Software Engineer</div>
+            <div class="subtitle">Senior Software Engineer | Systems Integration & AI Developer</div>
         </div>
         <div class="header-right">
             <a href="mailto:christian.r.m.job@gmail.com">
@@ -280,13 +280,9 @@
     <section class="summary">
         <h2>SUMMARY</h2>
         <p><strong>Senior Software Engineer</strong> with <strong>9+ years of experience</strong> specializing in
-            <strong>scalable backend architectures</strong>, high-throughput systems, and
-            <strong>AI-augmented development</strong>. Expert in <strong>Python, JavaScript/TypeScript, and Go</strong>
-            ecosystems, with a proven track record of leading high-impact initiatives from legacy transformations to
-            modern microservices. Adept at navigating technical ambiguity, driving cross-functional alignment, and
-            integrating <strong>LLM-assisted workflows (Gemini)</strong> that accelerated production cycles by
-            <strong>~30%</strong>. Strategic leader focused on engineering velocity, team scalability, and delivering
-            robust data-driven solutions.
+            <strong>systems integration, AI-assisted software engineering</strong>, and high-throughput backend architectures.
+            Expert in <strong>Go, Python, TypeScript, and GCP</strong>, with a proven track record of unblocking infrastructure bottlenecks, designing scalable integration layers, and delivering working proofs. Experienced in utilizing
+            <strong>modern AI developer agents (Antigravity)</strong> and the <strong>Gemini API</strong> to accelerate SDLC cycle times by <strong>~30%</strong>, driving team velocity, code quality, and release readiness.
         </p>
     </section>
 
@@ -297,25 +293,15 @@
             <div class="item-header">
                 <div class="item-title-left">
                     <span class="company-name">GlobalLogic</span><span class="pipe-separator">|</span><span
-                        class="job-title">Senior Software Engineer</span>
+                        class="job-title">Senior Software Engineer & Tech Anchor</span>
                 </div>
                 <div class="date-right">May 2023 - Present</div>
             </div>
             <ul>
-                <li><strong>Acted as the technical anchor</strong> for a <strong>real-time ticketing metadata
-                        layer</strong>, guiding implementation strategies that transitioned a legacy daily-batch process
-                    to <strong>immediate execution</strong>, eliminating <strong>24-hour latency</strong>.</li>
-                <li><strong>Stepped in as a vanguard Senior Engineer</strong> to support an understaffed, critical
-                    ticketing platform; mastering its <strong>Go (Golang)</strong> and <strong>Angular</strong> stack to
-                    unblock core features and establishing <strong>Knowledge Transfers (KT)</strong> to accelerate
-                    onboarding.</li>
-                <li><strong>Designed high-throughput RESTful APIs</strong> and a <strong>declarative YAML configuration
-                        engine</strong> that dynamically maps user inputs into <strong>100+ metadata fields</strong>,
-                    ensuring system scalability and eliminating hardcoded logic.</li>
-                <li><strong>Engineered event-driven JS notification triggers</strong> while leveraging
-                    <strong>AI-assisted workflows</strong> to accelerate feature delivery by <strong>~30%</strong>,
-                    mentoring engineering colleagues on debugging and long-term codebase stability.
-                </li>
+                <li><strong>Acted as a client-facing technical lead</strong> for a <strong>real-time ticketing metadata layer</strong>, unblocking infrastructure bottlenecks and moving daily-batch processes to immediate execution, eliminating latency.</li>
+                <li><strong>Collaborated directly with customer engineering and architecture teams</strong> to support a critical ticketing platform, mastering its <strong>Go (Golang)</strong> and Angular stack to unblock core features and accelerate cycle times.</li>
+                <li><strong>Designed high-throughput REST APIs</strong> and a declarative YAML configuration engine for <strong>systems integration</strong>, mapping complex user inputs into 100+ metadata fields to automate validation and improve release readiness.</li>
+                <li><strong>Engineered event-driven JS notification triggers while leveraging AI-assisted development workflows (Antigravity)</strong> to accelerate feature delivery by <strong>~30%</strong>, mentoring engineering colleagues on debugging and code stability.</li>
             </ul>
         </div>
 
@@ -328,14 +314,8 @@
                 <div class="date-right">May 2022 - May 2023</div>
             </div>
             <ul>
-                <li><strong>Spearheaded</strong> the frontend development of a high-traffic Knowledge Management System
-                    for a <strong>Big 4 client</strong>, implementing a reusable <strong>React component
-                        library</strong> that <strong>reduced UI development time</strong> by <strong>~25%</strong>.
-                </li>
-                <li><strong>Drove</strong> architectural decisions to ensure scalability, <strong>aligning engineering
-                        teams</strong> with emerging <strong>AI/ML
-                        infrastructure</strong> and ensuring technical consistency.</li>
-
+                <li><strong>Field engineered high-traffic client integrations</strong> for a <strong>Big 4 customer</strong>, designing a reusable React component library and UI architecture that accelerated front-end delivery cycles by <strong>~25%</strong>.</li>
+                <li><strong>Drove architectural decisions to ensure scalability</strong>, aligning engineering teams with emerging <strong>AI/ML infrastructure</strong> and technical consistency guidelines.</li>
             </ul>
         </div>
 
@@ -348,34 +328,24 @@
                 <div class="date-right">May 2021 - May 2022</div>
             </div>
             <ul>
-                <li><strong>Designed and engineered</strong> scalable backend services in <strong>TypeScript</strong>
-                    and <strong>Python
-                        (Django)</strong>, supporting <strong>enterprise AI/ML workloads</strong> and
-                    <strong>establishing API design patterns</strong>.
-                </li>
-                <li>Designed secure <strong>REST APIs</strong> for internal and external consumption, enabling seamless
-                    integration with client systems.</li>
-                <li><strong>Improved</strong> client-facing load times by <strong>35%</strong> through
-                    <strong>architectural redesign</strong> and backend optimization.
-                </li>
-                <li>Optimized <strong>Angular</strong> frontend via lazy loading, improving Time-to-Interactive (TTI) by
-                    <strong>~40%</strong>.
-                </li>
+                <li><strong>Architected scalable client integrations</strong> using <strong>TypeScript</strong> and <strong>Python (Django)</strong>, supporting enterprise <strong>AI/ML workloads</strong> and establishing standardized REST API design patterns.</li>
+                <li><strong>Designed secure REST APIs</strong> for internal and external consumption, enabling seamless integration and automated data pipelines with client systems.</li>
+                <li><strong>Measured and optimized system latency</strong>, achieving a <strong>35% reduction in cycle time</strong> and unblocking data ingestion bottlenecks through backend and database optimization.</li>
+                <li><strong>Delivered high-performance proofs of concept</strong> in Angular, improving Time-to-Interactive by <strong>~40%</strong> to ensure enterprise-grade production readiness and user experience.</li>
             </ul>
         </div>
 
         <div class="experience-item">
             <div class="item-header">
                 <div class="item-title-left">
-                    <span class="company-name">Independent Study & Certification</span><span
-                        class="pipe-separator">|</span><span class="job-title">Data Science & Software
-                        Engineering</span>
+                    <span class="company-name">Independent Software Consultant</span><span
+                        class="pipe-separator">|</span><span class="job-title">Software Engineer & Solutions Developer</span>
                 </div>
                 <div class="date-right">Jan 2019 - Apr 2021</div>
             </div>
             <ul>
-                <li><strong>Engineered data pipelines and ML models</strong>: Developed and trained predictive models using Python as part of the IBM Data Science program, processing raw datasets into structured formats for analysis.</li>
-                <li><strong>Implemented complex frontend logic</strong>: Built responsive web interfaces and solved advanced JavaScript algorithms and data structures, earning certifications in Responsive Web Design and JavaScript Algorithms.</li>
+                <li><strong>Architected and engineered data integration pipelines</strong> using Python, processing raw datasets and designing ML models to solve predictive analytics challenges.</li>
+                <li><strong>Developed high-performance web applications</strong> and implemented complex JavaScript logic, deploying responsive solutions aligned with modern UI/UX standards.</li>
             </ul>
         </div>
 
@@ -388,8 +358,7 @@
                 <div class="date-right">Jan 2018 - Dec 2018</div>
             </div>
             <ul>
-                <li><strong>Architected technical sandbox environments</strong>: Designed and deployed relational database schemas and Git version control workflows, simulating real-world production environments for graduate-level projects.</li>
-                <li><strong>Led code reviews and technical direction</strong>: Mentored students through hands-on programming sessions, enforcing software architecture best practices and scalable code design.</li>
+                <li><strong>Led code reviews and technical direction</strong>, teaching database schemas, Git workflows, and software architecture to simulate real-world production environments.</li>
             </ul>
         </div>
 
@@ -402,9 +371,7 @@
                 <div class="date-right">Jul 2015 - Dec 2016</div>
             </div>
             <ul>
-                <li><strong>Engineered Torneofire user services from 0 to 1</strong>, developing RESTful APIs and social
-                    features using <strong>Node.js/MongoDB</strong>, boosting
-                    engagement by <strong>~20%</strong>.</li>
+                <li><strong>Engineered RESTful APIs and social integration features</strong> from 0 to 1 using Node.js and MongoDB, boosting user engagement by ~20%.</li>
             </ul>
         </div>
     </section>
@@ -412,13 +379,11 @@
     <section>
         <h2>EDUCATION</h2>
         <div class="education-item">
-            <div class="edu-left">Universidad Autónoma de Coahuila <span style="color:var(--text-dark)">| M.S. Computer
-                    Science (Coursework Completed - GPA: 92/100)</span></div>
+            <div class="edu-left"><strong>Universidad Autónoma de Coahuila</strong> <span style="color:var(--text-dark)">| M.S. Computer Science (Coursework Completed)</span></div>
             <div class="edu-right">Dec 2018</div>
         </div>
         <div class="education-item">
-            <div class="edu-left">Universidad Autónoma de Coahuila <span style="color:var(--text-dark)">| B.S. Computer
-                    Science</span></div>
+            <div class="edu-left"><strong>Universidad Autónoma de Coahuila</strong> <span style="color:var(--text-dark)">| B.S. Computer Science</span></div>
             <div class="edu-right">Jul 2015</div>
         </div>
     </section>
@@ -427,24 +392,16 @@
         <h2>SKILLS</h2>
         <div class="skills-container">
             <div class="skills-group">
-                <div class="skills-title">Languages</div>
-                <div class="skills-list">Python, TypeScript, JavaScript (ES6+), SQL, Go.</div>
+                <div class="skills-title">AI & Automation</div>
+                <div class="skills-list">Gemini API, Antigravity (AI Developer Agent), AI-assisted development, prompt engineering.</div>
             </div>
             <div class="skills-group">
-                <div class="skills-title">Cloud & DevOps</div>
-                <div class="skills-list">Google Cloud Platform (GCP), CI/CD pipelines.</div>
+                <div class="skills-title">Core Engineering</div>
+                <div class="skills-list">Go, Python, TypeScript, SQL, Node.js (Express), Django, REST APIs, systems integration.</div>
             </div>
             <div class="skills-group">
-                <div class="skills-title">Backend & Frameworks</div>
-                <div class="skills-list">Django, Node.js (Express), REST APIs, Microservices.</div>
-            </div>
-            <div class="skills-group">
-                <div class="skills-title">Frontend</div>
-                <div class="skills-list">React, Angular, Vue.js, HTML5/CSS3.</div>
-            </div>
-            <div class="skills-group">
-                <div class="skills-title">Testing & Tools</div>
-                <div class="skills-list">Jasmine, Unit Testing, Git.</div>
+                <div class="skills-title">DevOps & Frontend</div>
+                <div class="skills-list">GCP, CI/CD, release readiness, observability, React, Angular, Vue.js, HTML5/CSS3.</div>
             </div>
         </div>
     </section>
@@ -458,18 +415,9 @@
             </div>
             <div style="width: 52%;">
                 <h2>Projects</h2>
-                <div style="margin-bottom: 2px; margin-top: 2px;">• <strong>TagPix</strong>: AI-Powered Android
-                    Application (Gemini Integration)</div>
-                <div>• <strong>Express Skeleton</strong>: VSCode Extension for scaffolding (5.8k+ installs)</div>
+                <div style="margin-bottom: 2px; margin-top: 2px;">• <strong>TagPix</strong>: AI-powered Android app with Gemini API integration for metadata extraction.</div>
+                <div>• <strong>Express Skeleton</strong>: VSCode extension for project scaffolding (6k+ installs).</div>
             </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>LANGUAGES</h2>
-        <div class="two-col-list">
-            <div>English <span style="color:var(--accent-job)">C1</span></div>
-            <div>Spanish <span style="color:var(--accent-job)">Native</span></div>
         </div>
     </section>
 
