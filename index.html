@@ -20,6 +20,7 @@
         }
 
         @page {
+            size: letter;
             margin: 0;
         }
 
@@ -35,9 +36,9 @@
             color: var(--text-dark);
             max-width: 8.5in;
             margin: 0 auto;
-            padding: 0.35in 0.45in;
+            padding: 0.32in 0.45in;
             background: white;
-            font-size: 9.5pt;
+            font-size: 9.3pt;
         }
 
         /* --- HEADER --- */
@@ -52,7 +53,7 @@
 
         .header-left h1 {
             color: var(--text-dark);
-            font-size: 20pt;
+            font-size: 19.5pt;
             font-weight: bold;
             margin: 0;
             line-height: 1.1;
@@ -60,7 +61,7 @@
 
         .header-left .subtitle {
             color: var(--accent-job);
-            font-size: 11pt;
+            font-size: 10.5pt;
             font-family: var(--font-family);
             font-weight: bold;
             margin-top: 1.5px;
@@ -90,42 +91,43 @@
 
         /* --- SECTIONS --- */
         section {
-            margin-bottom: 4.5px;
+            margin-bottom: 4px;
         }
 
         h2 {
             font-family: var(--font-family-sans);
-            font-size: 9.5pt;
+            font-size: 9.3pt;
             color: var(--accent-heading);
             text-transform: uppercase;
             border-bottom: 1px solid var(--accent-heading);
             padding-bottom: 1px;
             margin-bottom: 2px;
-            margin-top: 4.5px;
+            margin-top: 4px;
             font-weight: bold;
+            letter-spacing: 0.5px;
         }
 
         /* --- SUMMARY --- */
         .summary p {
             text-align: justify;
-            font-size: 9.5pt;
+            font-size: 9.3pt;
             line-height: 1.22;
         }
 
         /* --- EXPERIENCE --- */
         .experience-item {
-            margin-bottom: 3.5px;
+            margin-bottom: 3px;
         }
 
         .item-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 1.5px;
+            margin-bottom: 1px;
         }
 
         .item-title-left {
-            font-size: 10pt;
+            font-size: 9.8pt;
         }
 
         .company-name {
@@ -146,17 +148,18 @@
         .date-right {
             font-family: var(--font-family-sans);
             font-weight: bold;
-            font-size: 9pt;
+            font-size: 8.8pt;
+            white-space: nowrap;
         }
 
         ul {
-            padding-left: 15px;
+            padding-left: 14px;
             margin: 0;
-            line-height: 1.21;
+            line-height: 1.2;
         }
 
         li {
-            font-size: 9.5pt;
+            font-size: 9.2pt;
             margin-bottom: 1px;
             text-align: justify;
         }
@@ -166,12 +169,27 @@
             font-weight: bold;
         }
 
+        /* --- PROJECTS & CERTIFICATIONS --- */
+        .project-link {
+            color: var(--accent-heading);
+            text-decoration: underline;
+            text-underline-offset: 1.5px;
+        }
+
+        /* --- SKILLS --- */
+        .skills-line {
+            font-size: 9.1pt;
+            line-height: 1.22;
+            margin-bottom: 1.5px;
+        }
+
         /* --- EDUCATION --- */
         .education-item {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 2px;
-            font-size: 9.5pt;
+            align-items: baseline;
+            margin-bottom: 1.5px;
+            font-size: 9.2pt;
         }
 
         .edu-left {
@@ -181,55 +199,24 @@
         .edu-right {
             font-family: var(--font-family-sans);
             font-weight: bold;
-            font-size: 9pt;
-        }
-
-        /* --- SKILLS --- */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 4px 15px;
-            font-size: 9pt;
-        }
-
-        .skills-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .skills-title {
-            color: var(--accent-heading);
-            font-weight: bold;
-            font-family: var(--font-family-sans);
-            margin-bottom: 1px;
-        }
-
-        .skills-list {
-            font-size: 9pt;
-            line-height: 1.2;
-        }
-
-        /* --- CERTIFICATIONS & PROJECTS --- */
-        .two-col-list {
-            display: flex;
-            justify-content: space-between;
-            font-size: 9.5pt;
-            font-weight: bold;
-        }
-
-        .two-col-list>div {
-            width: 48%;
+            font-size: 8.8pt;
+            white-space: nowrap;
         }
 
         /* Print adjustments */
         @media print {
             body {
-                padding: 0.35in 0.45in;
+                padding: 0.32in 0.45in;
                 margin: 0;
             }
 
             .header-right a {
                 color: var(--accent-heading) !important;
+            }
+
+            .project-link {
+                color: var(--accent-heading) !important;
+                text-decoration: none !important;
             }
 
             * {
@@ -250,7 +237,7 @@
     <header>
         <div class="header-left">
             <h1>Christian Rincon</h1>
-            <div class="subtitle">Senior Software Engineer | Systems Integration & AI Developer</div>
+            <div class="subtitle">Senior Software Engineer | Backend & Distributed Systems Architect</div>
         </div>
         <div class="header-right">
             <a href="mailto:christian.r.m.job@gmail.com">
@@ -279,11 +266,7 @@
 
     <section class="summary">
         <h2>SUMMARY</h2>
-        <p><strong>Senior Software Engineer</strong> with <strong>9+ years of experience</strong> specializing in
-            <strong>systems integration, AI-assisted software engineering</strong>, and high-throughput backend architectures.
-            Expert in <strong>Go, Python, TypeScript, and GCP</strong>, with a proven track record of unblocking infrastructure bottlenecks, designing scalable integration layers, and delivering working proofs. Experienced in utilizing
-            <strong>modern AI developer agents (Antigravity)</strong> and the <strong>Gemini API</strong> to accelerate SDLC cycle times by <strong>~30%</strong>, driving team velocity, code quality, and release readiness.
-        </p>
+        <p><strong>Senior Software Engineer & Distributed Systems Architect</strong> with <strong>9+ years of experience</strong> engineering high-throughput, language-agnostic backend architectures, mission-critical systems integrations, and production <strong>LLM pipelines</strong>. Polyglot backend specialist with deep production mastery across <strong>JavaScript/TypeScript (Node.js), Go, and Python</strong>, backed by <strong>GCP, Docker, and PostgreSQL</strong>. Proven track record re-architecting legacy batch workflows into resilient real-time asynchronous event streams, orchestrating low-latency local and cloud inference (<strong>Gemini Flash API, Ollama</strong>), and building declarative validation engines for enterprise scale.</p>
     </section>
 
     <section>
@@ -298,10 +281,10 @@
                 <div class="date-right">May 2023 - Present</div>
             </div>
             <ul>
-                <li><strong>Acted as a client-facing technical lead</strong> for a <strong>real-time ticketing metadata layer</strong>, unblocking infrastructure bottlenecks and moving daily-batch processes to immediate execution, eliminating latency.</li>
-                <li><strong>Collaborated directly with customer engineering and architecture teams</strong> to support a critical ticketing platform, mastering its <strong>Go (Golang)</strong> and Angular stack to unblock core features and accelerate cycle times.</li>
-                <li><strong>Designed high-throughput REST APIs</strong> and a declarative YAML configuration engine for <strong>systems integration</strong>, mapping complex user inputs into 100+ metadata fields to automate validation and improve release readiness.</li>
-                <li><strong>Engineered event-driven JS notification triggers while leveraging AI-assisted development workflows (Antigravity)</strong> to accelerate feature delivery by <strong>~30%</strong>, mentoring engineering colleagues on debugging and code stability.</li>
+                <li><strong>Re-architected real-time metadata & ticketing layer</strong> from legacy daily batch processing to an asynchronous event-driven streaming pipeline, eliminating ingestion bottlenecks and reducing end-user perceptible latency to <strong>~0 ms</strong>.</li>
+                <li><strong>Spearheaded core backend engineering in Go (Golang)</strong> and frontend in Angular for a mission-critical enterprise ticketing platform, architecting high-concurrency request handlers and resolving complex distributed system bottlenecks.</li>
+                <li><strong>Designed high-throughput declarative YAML integration engine</strong> mapping <strong>100+ metadata fields</strong>, automating schema validation, eliminating manual sync errors, and significantly accelerating deployment cycles.</li>
+                <li><strong>Engineered event-driven JavaScript notification triggers and automated workflows</strong>, boosting feature delivery speed by <strong>30%</strong> while mentoring engineering teams on distributed debugging, system integration, and fault tolerance.</li>
             </ul>
         </div>
 
@@ -314,8 +297,8 @@
                 <div class="date-right">May 2022 - May 2023</div>
             </div>
             <ul>
-                <li><strong>Field engineered high-traffic client integrations</strong> for a <strong>Big 4 customer</strong>, designing a reusable React component library and UI architecture that accelerated front-end delivery cycles by <strong>~25%</strong>.</li>
-                <li><strong>Drove architectural decisions to ensure scalability</strong>, aligning engineering teams with emerging <strong>AI/ML infrastructure</strong> and technical consistency guidelines.</li>
+                <li><strong>Architected high-traffic client integrations and UI design systems</strong> in React/TypeScript for a <strong>Big 4 enterprise client</strong>, establishing reusable component architectures that accelerated frontend delivery velocity by <strong>~25%</strong>.</li>
+                <li><strong>Drove technical integration standards and backend scalability</strong>, aligning distributed services with emerging <strong>AI/ML infrastructure</strong> and enforcing strict API contracts across cross-functional engineering teams.</li>
             </ul>
         </div>
 
@@ -328,10 +311,9 @@
                 <div class="date-right">May 2021 - May 2022</div>
             </div>
             <ul>
-                <li><strong>Architected scalable client integrations</strong> using <strong>TypeScript</strong> and <strong>Python (Django)</strong>, supporting enterprise <strong>AI/ML workloads</strong> and establishing standardized REST API design patterns.</li>
-                <li><strong>Designed secure REST APIs</strong> for internal and external consumption, enabling seamless integration and automated data pipelines with client systems.</li>
-                <li><strong>Measured and optimized system latency</strong>, achieving a <strong>35% reduction in cycle time</strong> and unblocking data ingestion bottlenecks through backend and database optimization.</li>
-                <li><strong>Delivered high-performance proofs of concept</strong> in Angular, improving Time-to-Interactive by <strong>~40%</strong> to ensure enterprise-grade production readiness and user experience.</li>
+                <li><strong>Architected scalable client integrations and microservices</strong> using <strong>TypeScript (Node.js)</strong> and <strong>Python (Django)</strong>, supporting high-throughput enterprise <strong>AI/ML workloads</strong> and standardized REST APIs.</li>
+                <li><strong>Optimized data pipelines and PostgreSQL query execution</strong>, slashing end-to-end processing latency by <strong>35%</strong> and unblocking high-volume data ingestion bottlenecks.</li>
+                <li><strong>Delivered high-performance frontend proofs of concept in Angular</strong>, cutting Time-to-Interactive (TTI) by <strong>~40%</strong> to ensure sub-second UI responsiveness and enterprise production readiness.</li>
             </ul>
         </div>
 
@@ -344,8 +326,8 @@
                 <div class="date-right">Jan 2019 - Apr 2021</div>
             </div>
             <ul>
-                <li><strong>Architected and engineered data integration pipelines</strong> using Python, processing raw datasets and designing ML models to solve predictive analytics challenges.</li>
-                <li><strong>Developed high-performance web applications</strong> and implemented complex JavaScript logic, deploying responsive solutions aligned with modern UI/UX standards.</li>
+                <li><strong>Architected end-to-end data processing pipelines in Python</strong>, integrating multi-source datasets and training predictive ML models to solve complex business analytics challenges.</li>
+                <li><strong>Engineered full-stack web applications with JavaScript/Node.js</strong>, deploying responsive, high-concurrency client solutions with secure REST APIs and optimized database schemas.</li>
             </ul>
         </div>
 
@@ -358,7 +340,7 @@
                 <div class="date-right">Jan 2018 - Dec 2018</div>
             </div>
             <ul>
-                <li><strong>Led code reviews and technical direction</strong>, teaching database schemas, Git workflows, and software architecture to simulate real-world production environments.</li>
+                <li><strong>Instructed 100+ students in Software Architecture & Distributed Systems</strong>, leading code reviews and practical labs covering relational schema design, Git workflows, and production CI/CD patterns.</li>
             </ul>
         </div>
 
@@ -371,56 +353,57 @@
                 <div class="date-right">Jul 2015 - Dec 2016</div>
             </div>
             <ul>
-                <li><strong>Engineered RESTful APIs and social integration features</strong> from 0 to 1 using Node.js and MongoDB, boosting user engagement by ~20%.</li>
+                <li><strong>Engineered 0-to-1 RESTful services and real-time social integration features</strong> using Node.js (Express) and MongoDB, supporting high concurrent user sessions and boosting engagement by <strong>~20%</strong>.</li>
             </ul>
         </div>
     </section>
 
     <section>
-        <h2>EDUCATION</h2>
-        <div class="education-item">
-            <div class="edu-left"><strong>Universidad Autónoma de Coahuila</strong> <span style="color:var(--text-dark)">| M.S. Computer Science (Coursework Completed)</span></div>
-            <div class="edu-right">Dec 2018</div>
-        </div>
-        <div class="education-item">
-            <div class="edu-left"><strong>Universidad Autónoma de Coahuila</strong> <span style="color:var(--text-dark)">| B.S. Computer Science</span></div>
-            <div class="edu-right">Jul 2015</div>
-        </div>
+        <h2>PROJECTS</h2>
+        <ul>
+            <li><strong>TagPix</strong> | <a href="https://github.com/ChristianRM/TagPix" target="_blank" rel="noopener noreferrer" class="project-link">github.com/ChristianRM/TagPix</a>: Multimodal semantic indexing and search pipeline powered by <strong>Gemini Flash API</strong>, featuring automated rate-limit governance, structured output extraction, and local vector persistence.</li>
+            <li><strong>ReferLooker</strong> | <a href="https://github.com/ChristianRM/ReferLooker" target="_blank" rel="noopener noreferrer" class="project-link">github.com/ChristianRM/ReferLooker</a>: Autonomous technical sourcing pipeline combining <strong>Playwright</strong> headless crawling with local <strong>Ollama</strong> inference for candidate evaluation under the <strong>LLM-as-a-Judge</strong> pattern.</li>
+        </ul>
     </section>
 
     <section>
         <h2>SKILLS</h2>
-        <div class="skills-container">
-            <div class="skills-group">
-                <div class="skills-title">AI & Automation</div>
-                <div class="skills-list">Gemini API, Antigravity (AI Developer Agent), AI-assisted development, prompt engineering.</div>
-            </div>
-            <div class="skills-group">
-                <div class="skills-title">Core Engineering</div>
-                <div class="skills-list">Go, Python, TypeScript, SQL, Node.js (Express), Django, REST APIs, systems integration.</div>
-            </div>
-            <div class="skills-group">
-                <div class="skills-title">DevOps & Frontend</div>
-                <div class="skills-list">GCP, CI/CD, release readiness, observability, React, Angular, Vue.js, HTML5/CSS3.</div>
-            </div>
+        <div class="skills-line">
+            <strong>Languages & Runtimes:</strong> JavaScript/TypeScript (Node.js, Express), Go (Golang), Python, SQL (PostgreSQL).
+        </div>
+        <div class="skills-line">
+            <strong>Cloud & Distributed Systems:</strong> GCP, Docker, CI/CD, Microservices, High Concurrency, Asynchronous Event Pipelines, REST APIs.
+        </div>
+        <div class="skills-line">
+            <strong>AI & LLM Systems:</strong> Gemini Flash API, Ollama (Local LLM), Semantic Search & Indexing, LLM-as-a-Judge, Structured Outputs.
+        </div>
+        <div class="skills-line">
+            <strong>Frameworks & Architecture:</strong> React, Angular, Django, Flask, System Design, Fault Tolerance, Observability.
         </div>
     </section>
 
     <section>
-        <div class="two-col-list" style="font-weight: normal; font-size: 9pt; line-height: 1.3;">
-            <div style="width: 44%;">
-                <h2>Certifications</h2>
-                <div style="margin-bottom: 2px; margin-top: 2px;">• Google Cloud Associate Cloud Engineer (ACE)</div>
-                <div>• IBM Data Science Professional Certificate</div>
-            </div>
-            <div style="width: 52%;">
-                <h2>Projects</h2>
-                <div style="margin-bottom: 2px; margin-top: 2px;">• <strong>TagPix</strong>: AI-powered Android app with Gemini API integration for metadata extraction.</div>
-                <div>• <strong>Express Skeleton</strong>: VSCode extension for project scaffolding (6k+ installs).</div>
-            </div>
+        <h2>CERTIFICATIONS</h2>
+        <ul>
+            <li><strong>Google Cloud Certified Associate Cloud Engineer (ACE)</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>IBM Data Science Professional Certificate</strong></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>EDUCATION</h2>
+        <div class="education-item">
+            <div class="edu-left"><strong>Universidad Autónoma de Coahuila</strong> <span
+                    style="color:var(--text-dark)">| M.S. Computer Science (Coursework Completed)</span></div>
+            <div class="edu-right">Dec 2018</div>
+        </div>
+        <div class="education-item">
+            <div class="edu-left"><strong>Universidad Autónoma de Coahuila</strong> <span
+                    style="color:var(--text-dark)">| B.S. Computer Science</span></div>
+            <div class="edu-right">Jul 2015</div>
         </div>
     </section>
 
 </body>
 
 </html>
+
