@@ -67,6 +67,44 @@
             margin-top: 1.5px;
         }
 
+        .auth-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 3px;
+            padding: 1.5px 7px;
+            background: #eef4fb;
+            border: 1px solid #bfd5ef;
+            border-radius: 3px;
+            font-family: var(--font-family-sans);
+            font-size: 7.7pt;
+            line-height: 1.2;
+            letter-spacing: 0.15px;
+        }
+
+        .auth-tag .badge-status {
+            font-weight: bold;
+            color: var(--accent-heading);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .auth-tag .auth-icon {
+            width: 10.5px;
+            height: 10.5px;
+            fill: var(--accent-job);
+        }
+
+        .auth-tag .badge-sep {
+            color: #9cb8da;
+        }
+
+        .auth-tag .badge-note {
+            color: #333333;
+            font-weight: 500;
+        }
+
         .header-right {
             text-align: right;
             font-size: 8pt;
@@ -110,8 +148,8 @@
         /* --- SUMMARY --- */
         .summary p {
             text-align: justify;
-            font-size: 9.3pt;
-            line-height: 1.22;
+            font-size: 9.2pt;
+            line-height: 1.20;
         }
 
         /* --- EXPERIENCE --- */
@@ -135,7 +173,8 @@
             font-weight: bold;
         }
 
-        .pipe-separator {
+        .pipe-separator,
+        .separator {
             color: var(--accent-job);
             margin: 0 4px;
         }
@@ -219,6 +258,13 @@
                 text-decoration: none !important;
             }
 
+            .auth-tag {
+                background: #f1f5fa !important;
+                border-color: #bfd5ef !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
             * {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
@@ -238,6 +284,17 @@
         <div class="header-left">
             <h1>Christian Rincon</h1>
             <div class="subtitle">Senior Software Engineer | Backend & Distributed Systems Architect</div>
+            <div class="auth-tag">
+                <span class="badge-status">
+                    <svg class="auth-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                    </svg>
+                    Work Auth: TN Visa Eligible (USMCA)
+                </span>
+                <span class="badge-sep">•</span>
+                <span class="badge-note">No H-1B Lottery Required (Immediate Cross-Border Hire)</span>
+            </div>
         </div>
         <div class="header-right">
             <a href="mailto:christian.r.m.job@gmail.com">
@@ -266,7 +323,17 @@
 
     <section class="summary">
         <h2>SUMMARY</h2>
-        <p><strong>Senior Software Engineer & Distributed Systems Architect</strong> with <strong>9+ years of experience</strong> engineering high-throughput, language-agnostic backend architectures, mission-critical systems integrations, and production <strong>LLM pipelines</strong>. Polyglot backend specialist with deep production mastery across <strong>JavaScript/TypeScript (Node.js), Go, and Python</strong>, backed by <strong>GCP, Docker, and PostgreSQL</strong>. Proven track record re-architecting legacy batch workflows into resilient real-time asynchronous event streams, orchestrating low-latency local and cloud inference (<strong>Gemini Flash API, Ollama</strong>), and building declarative validation engines for enterprise scale.</p>
+        <p><strong>Senior Software Engineer & Distributed Systems Architect</strong> with <strong>9+ years of
+                experience</strong> engineering high-throughput, language-agnostic backend architectures,
+            customer enablement integrations, enterprise GTM workflows, and production <strong>LLM pipelines</strong>. Polyglot backend
+            specialist with deep production mastery across <strong>JavaScript/TypeScript (Node.js), Go, and
+                Python</strong>, backed by <strong>GCP, Docker, and PostgreSQL</strong>. Proven track record
+            re-architecting legacy batch workflows into resilient real-time asynchronous event streams, orchestrating
+            low-latency local and cloud inference (<strong>Gemini Flash API, Ollama</strong>), and building declarative
+            validation engines for enterprise scale.
+            <strong>TN Visa Eligible (USMCA)</strong> for expedited
+            cross-border hiring without visa lottery delays.
+        </p>
     </section>
 
     <section>
@@ -275,85 +342,112 @@
         <div class="experience-item">
             <div class="item-header">
                 <div class="item-title-left">
-                    <span class="company-name">GlobalLogic</span><span class="pipe-separator">|</span><span
+                    <span class="company-name">GlobalLogic</span> <span class="separator">–</span> <span
                         class="job-title">Senior Software Engineer & Tech Anchor</span>
                 </div>
                 <div class="date-right">May 2023 - Present</div>
             </div>
             <ul>
-                <li><strong>Re-architected real-time metadata & ticketing layer</strong> from legacy daily batch processing to an asynchronous event-driven streaming pipeline, eliminating ingestion bottlenecks and reducing end-user perceptible latency to <strong>~0 ms</strong>.</li>
-                <li><strong>Spearheaded core backend engineering in Go (Golang)</strong> and frontend in Angular for a mission-critical enterprise ticketing platform, architecting high-concurrency request handlers and resolving complex distributed system bottlenecks.</li>
-                <li><strong>Designed high-throughput declarative YAML integration engine</strong> mapping <strong>100+ metadata fields</strong>, automating schema validation, eliminating manual sync errors, and significantly accelerating deployment cycles.</li>
-                <li><strong>Engineered event-driven JavaScript notification triggers and automated workflows</strong>, boosting feature delivery speed by <strong>30%</strong> while mentoring engineering teams on distributed debugging, system integration, and fault tolerance.</li>
+                <li><strong>Re-architected real-time metadata & ticketing layer</strong> from legacy daily batch
+                    processing to an asynchronous event-driven streaming pipeline, eliminating ingestion bottlenecks and
+                    reducing end-user perceptible latency to <strong>~0 ms</strong>.</li>
+                <li><strong>Spearheaded core backend engineering in Go (Golang)</strong> and frontend in Angular for a
+                    mission-critical enterprise ticketing platform, architecting high-concurrency request handlers and
+                    resolving complex distributed system bottlenecks.</li>
+                <li><strong>Designed high-throughput declarative YAML integration engine</strong> mapping <strong>100+
+                        metadata fields</strong>, automating schema validation, eliminating manual sync errors, and
+                    significantly accelerating deployment cycles.</li>
+                <li><strong>Automated dynamic ticketing routing rules and tailored component configurations</strong> for
+                    global enterprise clients, eliminating workflow bottlenecks and accelerating cross-functional operations.</li>
             </ul>
         </div>
 
         <div class="experience-item">
             <div class="item-header">
                 <div class="item-title-left">
-                    <span class="company-name">ApexSystems</span><span class="pipe-separator">|</span><span
+                    <span class="company-name">ApexSystems</span> <span class="separator">–</span> <span
                         class="job-title">Senior Software Engineer</span>
                 </div>
                 <div class="date-right">May 2022 - May 2023</div>
             </div>
             <ul>
-                <li><strong>Architected high-traffic client integrations and UI design systems</strong> in React/TypeScript for a <strong>Big 4 enterprise client</strong>, establishing reusable component architectures that accelerated frontend delivery velocity by <strong>~25%</strong>.</li>
-                <li><strong>Drove technical integration standards and backend scalability</strong>, aligning distributed services with emerging <strong>AI/ML infrastructure</strong> and enforcing strict API contracts across cross-functional engineering teams.</li>
+                <li><strong>Architected high-traffic client integrations and UI design systems</strong> in
+                    React/TypeScript for a <strong>Big 4 enterprise client</strong>, establishing reusable component
+                    architectures that accelerated frontend delivery velocity by <strong>~25%</strong>.</li>
+                <li><strong>Drove technical integration standards and backend scalability</strong>, aligning distributed
+                    services with emerging <strong>AI/ML infrastructure</strong> and enforcing strict API contracts
+                    across cross-functional engineering teams.</li>
             </ul>
         </div>
 
         <div class="experience-item">
             <div class="item-header">
                 <div class="item-title-left">
-                    <span class="company-name">GoSharp</span><span class="pipe-separator">|</span><span
+                    <span class="company-name">GoSharp</span> <span class="separator">–</span> <span
                         class="job-title">Senior Software Engineer</span>
                 </div>
                 <div class="date-right">May 2021 - May 2022</div>
             </div>
             <ul>
-                <li><strong>Architected scalable client integrations and microservices</strong> using <strong>TypeScript (Node.js)</strong> and <strong>Python (Django)</strong>, supporting high-throughput enterprise <strong>AI/ML workloads</strong> and standardized REST APIs.</li>
-                <li><strong>Optimized data pipelines and PostgreSQL query execution</strong>, slashing end-to-end processing latency by <strong>35%</strong> and unblocking high-volume data ingestion bottlenecks.</li>
-                <li><strong>Delivered high-performance frontend proofs of concept in Angular</strong>, cutting Time-to-Interactive (TTI) by <strong>~40%</strong> to ensure sub-second UI responsiveness and enterprise production readiness.</li>
+                <li><strong>Architected scalable client integrations and microservices</strong> using <strong>TypeScript
+                        (Node.js)</strong> and <strong>Python (Django)</strong>, supporting high-throughput enterprise
+                    <strong>AI/ML workloads</strong> and standardized REST APIs.
+                </li>
+                <li><strong>Optimized data pipelines and PostgreSQL query execution</strong>, slashing end-to-end
+                    processing latency by <strong>35%</strong> and unblocking high-volume data ingestion bottlenecks.
+                </li>
+                <li><strong>Delivered high-performance frontend proofs of concept in Angular</strong>, cutting
+                    Time-to-Interactive (TTI) by <strong>~40%</strong> to ensure sub-second UI responsiveness and
+                    enterprise production readiness.</li>
             </ul>
         </div>
 
         <div class="experience-item">
             <div class="item-header">
                 <div class="item-title-left">
-                    <span class="company-name">Independent Software Consultant</span><span
-                        class="pipe-separator">|</span><span class="job-title">Software Engineer & Solutions Developer</span>
+                    <span class="company-name">Independent Software Consultant</span> <span class="separator">–</span>
+                    <span class="job-title">Software Engineer & Solutions Developer</span>
                 </div>
                 <div class="date-right">Jan 2019 - Apr 2021</div>
             </div>
             <ul>
-                <li><strong>Architected end-to-end data processing pipelines in Python</strong>, integrating multi-source datasets and training predictive ML models to solve complex business analytics challenges.</li>
-                <li><strong>Engineered full-stack web applications with JavaScript/Node.js</strong>, deploying responsive, high-concurrency client solutions with secure REST APIs and optimized database schemas.</li>
+                <li><strong>Architected end-to-end data processing pipelines in Python</strong>, integrating
+                    multi-source datasets and training predictive ML models to solve complex business analytics
+                    challenges.</li>
+                <li><strong>Engineered full-stack web applications with JavaScript/Node.js</strong>, deploying
+                    responsive, high-concurrency client solutions with secure REST APIs and optimized database schemas.
+                </li>
             </ul>
         </div>
 
         <div class="experience-item">
             <div class="item-header">
                 <div class="item-title-left">
-                    <span class="company-name">Universidad Autónoma de Coahuila</span><span
-                        class="pipe-separator">|</span><span class="job-title">Professor of Computer Science</span>
+                    <span class="company-name">Universidad Autónoma de Coahuila</span> <span class="separator">–</span>
+                    <span class="job-title">Professor of Computer Science</span>
                 </div>
                 <div class="date-right">Jan 2018 - Dec 2018</div>
             </div>
             <ul>
-                <li><strong>Delivered specialized capstone coursework for graduating engineering candidates</strong>, leading practical labs and code reviews on Software Architecture, relational schema design, Git workflows, and system design patterns.</li>
+                <li><strong>Delivered specialized capstone coursework for graduating engineering candidates</strong>,
+                    leading practical labs and code reviews on Software Architecture, relational schema design, Git
+                    workflows, and system design patterns.</li>
             </ul>
         </div>
 
         <div class="experience-item">
             <div class="item-header">
                 <div class="item-title-left">
-                    <span class="company-name">Torneofire</span><span class="pipe-separator">|</span><span
+                    <span class="company-name">Torneofire</span> <span class="separator">–</span> <span
                         class="job-title">Software Engineer</span>
                 </div>
                 <div class="date-right">Jul 2015 - Dec 2016</div>
             </div>
             <ul>
-                <li><strong>Engineered 0-to-1 RESTful services and real-time social integration features</strong> using Node.js (Express) and MongoDB, supporting high concurrent user sessions and boosting engagement by <strong>~20%</strong>.</li>
+                <li><strong>Engineered 0-to-1 RESTful services and real-time social integration features</strong> using
+                    Node.js (Express) and MongoDB, supporting high concurrent user sessions and boosting engagement by
+                    <strong>~20%</strong>.
+                </li>
             </ul>
         </div>
     </section>
@@ -361,31 +455,45 @@
     <section>
         <h2>PROJECTS</h2>
         <ul>
-            <li><strong>TagPix</strong> | <a href="https://github.com/ChristianRM/TagPix" target="_blank" rel="noopener noreferrer" class="project-link">github.com/ChristianRM/TagPix</a>: Multimodal semantic indexing and search pipeline powered by <strong>Gemini Flash API</strong>, featuring automated rate-limit governance, structured output extraction, and local vector persistence.</li>
-            <li><strong>ReferLooker</strong> | <a href="https://github.com/ChristianRM/ReferLooker" target="_blank" rel="noopener noreferrer" class="project-link">github.com/ChristianRM/ReferLooker</a>: Autonomous technical sourcing pipeline combining <strong>Playwright</strong> headless crawling with local <strong>Ollama</strong> inference for candidate evaluation under the <strong>LLM-as-a-Judge</strong> pattern.</li>
+            <li><strong>TagPix</strong> | <a href="https://github.com/ChristianRM/TagPix" target="_blank"
+                    rel="noopener noreferrer" class="project-link">github.com/ChristianRM/TagPix</a>: Multimodal
+                semantic indexing and search pipeline powered by <strong>Gemini Flash API</strong>, featuring automated
+                rate-limit governance, structured output extraction, and local vector persistence.</li>
+            <li><strong>ReferLooker</strong> | <a href="https://github.com/ChristianRM/ReferLooker" target="_blank"
+                    rel="noopener noreferrer" class="project-link">github.com/ChristianRM/ReferLooker</a>: Autonomous
+                technical sourcing pipeline combining <strong>Playwright</strong> headless crawling with local
+                <strong>Ollama</strong> inference for candidate evaluation under the <strong>LLM-as-a-Judge</strong>
+                pattern.
+            </li>
         </ul>
     </section>
 
     <section>
         <h2>SKILLS</h2>
         <div class="skills-line">
-            <strong>Languages & Runtimes:</strong> JavaScript/TypeScript (Node.js, Express), Go (Golang), Python, SQL (PostgreSQL).
+            <strong>Languages & Runtimes:</strong> JavaScript/TypeScript (Node.js, Express), Go (Golang), Python, SQL
+            (PostgreSQL).
         </div>
         <div class="skills-line">
-            <strong>Cloud & Distributed Systems:</strong> GCP, Docker, CI/CD, Microservices, High Concurrency, Asynchronous Event Pipelines, REST APIs.
+            <strong>Cloud & Distributed Systems:</strong> GCP, Docker, CI/CD, Microservices, High Concurrency,
+            Asynchronous Event Pipelines, REST APIs.
         </div>
         <div class="skills-line">
-            <strong>AI & LLM Systems:</strong> Gemini Flash API, Ollama (Local LLM), Semantic Search & Indexing, LLM-as-a-Judge, Structured Outputs.
+            <strong>AI & LLM Systems:</strong> Gemini Flash API, Ollama (Local LLM), Semantic Search & Indexing,
+            LLM-as-a-Judge, Structured Outputs.
         </div>
         <div class="skills-line">
-            <strong>Frameworks & Architecture:</strong> React, Angular, Django, Flask, System Design, Fault Tolerance, Observability.
+            <strong>Frameworks & Architecture:</strong> React, Angular, Django, Flask, System Design, Fault Tolerance,
+            Observability.
         </div>
     </section>
 
     <section>
         <h2>CERTIFICATIONS</h2>
         <ul>
-            <li><strong>Google Cloud Certified Associate Cloud Engineer (ACE)</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>IBM Data Science Professional Certificate</strong></li>
+            <li><strong>Google Cloud Certified Associate Cloud Engineer (ACE)</strong> &nbsp;&nbsp;|&nbsp;&nbsp;
+                <strong>IBM Data Science Professional Certificate</strong>
+            </li>
         </ul>
     </section>
 
@@ -393,12 +501,12 @@
         <h2>EDUCATION</h2>
         <div class="education-item">
             <div class="edu-left"><strong>Universidad Autónoma de Coahuila</strong> <span
-                    style="color:var(--text-dark)">| M.S. Computer Science (Coursework Completed)</span></div>
+                    style="color:var(--text-dark)">– M.S. Computer Science (Coursework Completed)</span></div>
             <div class="edu-right">Dec 2018</div>
         </div>
         <div class="education-item">
             <div class="edu-left"><strong>Universidad Autónoma de Coahuila</strong> <span
-                    style="color:var(--text-dark)">| B.S. Computer Science</span></div>
+                    style="color:var(--text-dark)">– B.S. Computer Science</span></div>
             <div class="edu-right">Jul 2015</div>
         </div>
     </section>
@@ -406,4 +514,3 @@
 </body>
 
 </html>
-

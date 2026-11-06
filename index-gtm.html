@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Rincon - Resume</title>
+    <style>
+        :root {
+            --primary: #000000;
+            --accent-heading: #2D588B;
+            /* Darker blue for Section Headers */
+            --accent-job: #2D65EF;
+            /* Brighter blue for Companies/Titles */
+            --text-dark: #000000;
+            --text-light: #333333;
+            --font-family: 'Georgia', 'Times New Roman', serif;
+            --font-family-sans: 'Arial', sans-serif;
+            --spacing-section: 3px;
+        }
+
+        @page {
+            size: letter;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.22;
+            color: var(--text-dark);
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.32in 0.45in;
+            background: white;
+            font-size: 9.3pt;
+        }
+
+        /* --- HEADER --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 2px solid var(--accent-heading);
+            padding-bottom: 1px;
+            margin-bottom: var(--spacing-section);
+        }
+
+        .header-left h1 {
+            color: var(--text-dark);
+            font-size: 19.5pt;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .header-left .subtitle {
+            color: var(--accent-job);
+            font-size: 10.5pt;
+            font-family: var(--font-family);
+            font-weight: bold;
+            margin-top: 1.5px;
+        }
+
+        .auth-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 3px;
+            padding: 1.5px 7px;
+            background: #eef4fb;
+            border: 1px solid #bfd5ef;
+            border-radius: 3px;
+            font-family: var(--font-family-sans);
+            font-size: 7.7pt;
+            line-height: 1.2;
+            letter-spacing: 0.15px;
+        }
+
+        .auth-tag .badge-status {
+            font-weight: bold;
+            color: var(--accent-heading);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .auth-tag .auth-icon {
+            width: 10.5px;
+            height: 10.5px;
+            fill: var(--accent-job);
+        }
+
+        .auth-tag .badge-sep {
+            color: #9cb8da;
+        }
+
+        .auth-tag .badge-note {
+            color: #333333;
+            font-weight: 500;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 8pt;
+            font-family: var(--font-family-sans);
+        }
+
+        .header-right a {
+            color: var(--accent-heading);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 2px;
+        }
+
+        .header-icon {
+            width: 12px;
+            height: 12px;
+            margin-right: 6px;
+            fill: currentColor;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            margin-bottom: 4px;
+        }
+
+        h2 {
+            font-family: var(--font-family-sans);
+            font-size: 9.3pt;
+            color: var(--accent-heading);
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--accent-heading);
+            padding-bottom: 1px;
+            margin-bottom: 2px;
+            margin-top: 4px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- SUMMARY --- */
+        .summary p {
+            text-align: justify;
+            font-size: 9.2pt;
+            line-height: 1.20;
+        }
+
+        /* --- EXPERIENCE --- */
+        .experience-item {
+            margin-bottom: 3px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+
+        .item-title-left {
+            font-size: 9.8pt;
+        }
+
+        .company-name {
+            color: var(--accent-heading);
+            font-weight: bold;
+        }
+
+        .pipe-separator,
+        .separator {
+            color: var(--accent-job);
+            margin: 0 4px;
+        }
+
+        .job-title {
+            color: var(--accent-job);
+            font-weight: bold;
+        }
+
+        .date-right {
+            font-family: var(--font-family-sans);
+            font-weight: bold;
+            font-size: 8.8pt;
+            white-space: nowrap;
+        }
+
+        ul {
+            padding-left: 14px;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        li {
+            font-size: 9.2pt;
+            margin-bottom: 1px;
+            text-align: justify;
+        }
+
+        /* --- BOLD TEXT IN LISTS --- */
+        strong {
+            font-weight: bold;
+        }
+
+        /* --- PROJECTS & CERTIFICATIONS --- */
+        .project-link {
+            color: var(--accent-heading);
+            text-decoration: underline;
+            text-underline-offset: 1.5px;
+        }
+
+        /* --- SKILLS --- */
+        .skills-line {
+            font-size: 9.1pt;
+            line-height: 1.22;
+            margin-bottom: 1.5px;
+        }
+
+        /* --- EDUCATION --- */
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1.5px;
+            font-size: 9.2pt;
+        }
+
+        .edu-left {
+            color: var(--accent-heading);
+        }
+
+        .edu-right {
+            font-family: var(--font-family-sans);
+            font-weight: bold;
+            font-size: 8.8pt;
+            white-space: nowrap;
+        }
+
+        /* Print adjustments */
+        @media print {
+            body {
+                padding: 0.32in 0.45in;
+                margin: 0;
+            }
+
+            .header-right a {
+                color: var(--accent-heading) !important;
+            }
+
+            .project-link {
+                color: var(--accent-heading) !important;
+                text-decoration: none !important;
+            }
+
+            .auth-tag {
+                background: #f1f5fa !important;
+                border-color: #bfd5ef !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            @page {
+                size: letter;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <h1>Christian Rincon</h1>
+            <div class="subtitle">Senior Software Engineer | Backend & Distributed Systems Architect</div>
+            <div class="auth-tag">
+                <span class="badge-status">
+                    <svg class="auth-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                    </svg>
+                    Work Auth: TN Visa Eligible (USMCA)
+                </span>
+                <span class="badge-sep">•</span>
+                <span class="badge-note">No H-1B Lottery Required (Immediate Cross-Border Hire)</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="mailto:christian.r.m.job@gmail.com">
+                <svg class="header-icon" viewBox="0 0 24 24">
+                    <path
+                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+                christian.r.m.job@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/christian-rincon-dev">
+                <svg class="header-icon" viewBox="0 0 24 24">
+                    <path
+                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-1.85 0-2.58 1.02-3 1.66v-1.42H8.35v8.32h3.89v-4.64c0-.25.05-.5.12-.68.2-.5.66-1.02 1.43-1.02 1 0 1.41.77 1.41 1.9v4.44h3.8zM6.55 9.04c1.23 0 2.01-.81 2.01-1.83C8.54 6.17 7.78 5.4 6.57 5.4c-1.22 0-2.01.77-2.01 1.81 0 1.02.77 1.83 1.97 1.83h.02zM4.6 18.5h3.89v-8.32H4.6v8.32z" />
+                </svg>
+                linkedin.com/in/christian-rincon-dev
+            </a>
+            <a href="https://github.com/ChristianRM">
+                <svg class="header-icon" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.479C19.138 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+                </svg>
+                github.com/ChristianRM
+            </a>
+        </div>
+    </header>
+
+    <section class="summary">
+        <h2>SUMMARY</h2>
+        <p><strong>Senior Software Engineer & Distributed Systems Architect</strong> with <strong>9+ years of
+                experience</strong> engineering high-throughput, language-agnostic backend architectures,
+            customer enablement integrations, enterprise GTM workflows, and production <strong>LLM pipelines</strong>. Polyglot backend
+            specialist with deep production mastery across <strong>JavaScript/TypeScript (Node.js), Go, and
+                Python</strong>, backed by <strong>GCP, Docker, and PostgreSQL</strong>. Proven track record
+            re-architecting legacy batch workflows into resilient real-time asynchronous event streams, orchestrating
+            low-latency local and cloud inference (<strong>Gemini Flash API, Ollama</strong>), and building declarative
+            validation engines for enterprise scale.
+            <strong>TN Visa Eligible (USMCA)</strong> for expedited
+            cross-border hiring without visa lottery delays.
+        </p>
+    </section>
+
+    <section>
+        <h2>EXPERIENCE</h2>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title-left">
+                    <span class="company-name">GlobalLogic</span> <span class="separator">–</span> <span
+                        class="job-title">Senior Software Engineer & Tech Anchor</span>
+                </div>
+                <div class="date-right">May 2023 - Present</div>
+            </div>
+            <ul>
+                <li><strong>Re-architected real-time metadata & ticketing layer</strong> from legacy daily batch
+                    processing to an asynchronous event-driven streaming pipeline, eliminating ingestion bottlenecks and
+                    reducing end-user perceptible latency to <strong>~0 ms</strong>.</li>
+                <li><strong>Spearheaded core backend engineering in Go (Golang)</strong> and frontend in Angular for a
+                    mission-critical enterprise ticketing platform, architecting high-concurrency request handlers and
+                    resolving complex distributed system bottlenecks.</li>
+                <li><strong>Designed high-throughput declarative YAML integration engine</strong> mapping <strong>100+
+                        metadata fields</strong>, automating schema validation, eliminating manual sync errors, and
+                    significantly accelerating deployment cycles.</li>
+                <li><strong>Automated dynamic ticketing routing rules and tailored component configurations</strong> for
+                    global enterprise clients, eliminating workflow bottlenecks and accelerating cross-functional operations.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title-left">
+                    <span class="company-name">ApexSystems</span> <span class="separator">–</span> <span
+                        class="job-title">Senior Software Engineer</span>
+                </div>
+                <div class="date-right">May 2022 - May 2023</div>
+            </div>
+            <ul>
+                <li><strong>Architected high-traffic client integrations and UI design systems</strong> in
+                    React/TypeScript for a <strong>Big 4 enterprise client</strong>, establishing reusable component
+                    architectures that accelerated frontend delivery velocity by <strong>~25%</strong>.</li>
+                <li><strong>Drove technical integration standards and backend scalability</strong>, aligning distributed
+                    services with emerging <strong>AI/ML infrastructure</strong> and enforcing strict API contracts
+                    across cross-functional engineering teams.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title-left">
+                    <span class="company-name">GoSharp</span> <span class="separator">–</span> <span
+                        class="job-title">Senior Software Engineer</span>
+                </div>
+                <div class="date-right">May 2021 - May 2022</div>
+            </div>
+            <ul>
+                <li><strong>Architected scalable client integrations and microservices</strong> using <strong>TypeScript
+                        (Node.js)</strong> and <strong>Python (Django)</strong>, supporting high-throughput enterprise
+                    <strong>AI/ML workloads</strong> and standardized REST APIs.
+                </li>
+                <li><strong>Optimized data pipelines and PostgreSQL query execution</strong>, slashing end-to-end
+                    processing latency by <strong>35%</strong> and unblocking high-volume data ingestion bottlenecks.
+                </li>
+                <li><strong>Delivered high-performance frontend proofs of concept in Angular</strong>, cutting
+                    Time-to-Interactive (TTI) by <strong>~40%</strong> to ensure sub-second UI responsiveness and
+                    enterprise production readiness.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title-left">
+                    <span class="company-name">Independent Software Consultant</span> <span class="separator">–</span>
+                    <span class="job-title">Software Engineer & Solutions Developer</span>
+                </div>
+                <div class="date-right">Jan 2019 - Apr 2021</div>
+            </div>
+            <ul>
+                <li><strong>Architected end-to-end data processing pipelines in Python</strong>, integrating
+                    multi-source datasets and training predictive ML models to solve complex business analytics
+                    challenges.</li>
+                <li><strong>Engineered full-stack web applications with JavaScript/Node.js</strong>, deploying
+                    responsive, high-concurrency client solutions with secure REST APIs and optimized database schemas.
+                </li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title-left">
+                    <span class="company-name">Universidad Autónoma de Coahuila</span> <span class="separator">–</span>
+                    <span class="job-title">Professor of Computer Science</span>
+                </div>
+                <div class="date-right">Jan 2018 - Dec 2018</div>
+            </div>
+            <ul>
+                <li><strong>Delivered specialized capstone coursework for graduating engineering candidates</strong>,
+                    leading practical labs and code reviews on Software Architecture, relational schema design, Git
+                    workflows, and system design patterns.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <div class="item-title-left">
+                    <span class="company-name">Torneofire</span> <span class="separator">–</span> <span
+                        class="job-title">Software Engineer</span>
+                </div>
+                <div class="date-right">Jul 2015 - Dec 2016</div>
+            </div>
+            <ul>
+                <li><strong>Engineered 0-to-1 RESTful services and real-time social integration features</strong> using
+                    Node.js (Express) and MongoDB, supporting high concurrent user sessions and boosting engagement by
+                    <strong>~20%</strong>.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>PROJECTS</h2>
+        <ul>
+            <li><strong>TagPix</strong> | <a href="https://github.com/ChristianRM/TagPix" target="_blank"
+                    rel="noopener noreferrer" class="project-link">github.com/ChristianRM/TagPix</a>: Multimodal
+                semantic indexing and search pipeline powered by <strong>Gemini Flash API</strong>, featuring automated
+                rate-limit governance, structured output extraction, and local vector persistence.</li>
+            <li><strong>ReferLooker</strong> | <a href="https://github.com/ChristianRM/ReferLooker" target="_blank"
+                    rel="noopener noreferrer" class="project-link">github.com/ChristianRM/ReferLooker</a>: Autonomous
+                technical sourcing pipeline combining <strong>Playwright</strong> headless crawling with local
+                <strong>Ollama</strong> inference for candidate evaluation under the <strong>LLM-as-a-Judge</strong>
+                pattern.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>SKILLS</h2>
+        <div class="skills-line">
+            <strong>Languages & Runtimes:</strong> JavaScript/TypeScript (Node.js, Express), Go (Golang), Python, SQL
+            (PostgreSQL).
+        </div>
+        <div class="skills-line">
+            <strong>Cloud & Distributed Systems:</strong> GCP, Docker, CI/CD, Microservices, High Concurrency,
+            Asynchronous Event Pipelines, REST APIs.
+        </div>
+        <div class="skills-line">
+            <strong>AI & LLM Systems:</strong> Gemini Flash API, Ollama (Local LLM), Semantic Search & Indexing,
+            LLM-as-a-Judge, Structured Outputs.
+        </div>
+        <div class="skills-line">
+            <strong>Frameworks & Architecture:</strong> React, Angular, Django, Flask, System Design, Fault Tolerance,
+            Observability.
+        </div>
+    </section>
+
+    <section>
+        <h2>CERTIFICATIONS</h2>
+        <ul>
+            <li><strong>Google Cloud Certified Associate Cloud Engineer (ACE)</strong> &nbsp;&nbsp;|&nbsp;&nbsp;
+                <strong>IBM Data Science Professional Certificate</strong>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>EDUCATION</h2>
+        <div class="education-item">
+            <div class="edu-left"><strong>Universidad Autónoma de Coahuila</strong> <span
+                    style="color:var(--text-dark)">– M.S. Computer Science (Coursework Completed)</span></div>
+            <div class="edu-right">Dec 2018</div>
+        </div>
+        <div class="education-item">
+            <div class="edu-left"><strong>Universidad Autónoma de Coahuila</strong> <span
+                    style="color:var(--text-dark)">– B.S. Computer Science</span></div>
+            <div class="edu-right">Jul 2015</div>
+        </div>
+    </section>
+
+</body>
+
+</html>
