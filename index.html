@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=850, user-scalable=yes">
     <title>Christian Rincon - Resume</title>
     <style>
         :root {
@@ -37,15 +37,21 @@
             user-drag: none;
         }
 
+        html {
+            background-color: #f1f3f5;
+        }
+
         body {
             font-family: var(--font-family);
             line-height: 1.22;
             color: var(--text-dark);
-            max-width: 8.5in;
-            margin: 0 auto;
+            width: 8.5in;
+            min-height: 11in;
+            margin: 16px auto;
             padding: 0.32in 0.45in;
             background: white;
             font-size: 9.3pt;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
         }
 
         /* --- HEADER --- */
@@ -288,9 +294,16 @@
                 display: none !important;
             }
 
+            html {
+                background: white !important;
+            }
+
             body {
-                padding: 0.32in 0.45in;
-                margin: 0;
+                width: 8.5in !important;
+                padding: 0.32in 0.45in !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
             }
 
             .header-right a {
