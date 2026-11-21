@@ -23,8 +23,9 @@ def main():
         page.goto(html_uri, wait_until="networkidle")
 
         # Emulate screen & print media to verify layout
-        page.screenshot(path=str(screenshot_file), full_page=True)
-        print(f"[+] Visual screenshot saved to: {screenshot_file}")
+        if "--screenshot" in sys.argv:
+            page.screenshot(path=str(screenshot_file), full_page=True)
+            print(f"[+] Visual screenshot saved to: {screenshot_file}")
 
         # Export to PDF Letter format with 0 margin (page styles handle padding)
         page.pdf(

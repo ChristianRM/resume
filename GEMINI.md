@@ -2,7 +2,7 @@
 1. Seguridad de credenciales: Nunca leas, imprimas, modifiques ni subas a git archivos .env o credenciales en ningún directorio.
 2. Control de versiones: Trabaja siempre en una rama dedicada llamada ai-mobile-dev (créala si no existe). Nunca hagas push directo a main salvo que se te pida explícitamente.
 3. Modo planeación vs ejecución: Si el usuario está rebotando ideas o haciendo preguntas, responde de forma concisa sin modificar archivos. Empieza a escribir código solo cuando la intención de implementar sea clara o el usuario diga "adelante".
-4. Pruebas y validación visual: Tras cada cambio de código, ejecuta la suite de pruebas del proyecto. Si el proyecto tiene interfaz web o UI, levanta el servidor local en un puerto libre, ejecuta Playwright para validar el flujo modificado y guarda las capturas de pantalla en ./tmp-screenshots/ (asegúrate de que tmp-screenshots/ esté en .gitignore).
+4. Pruebas y validación visual: Tras cada cambio de código, ejecuta la suite de pruebas del proyecto. Si el proyecto tiene interfaz web o UI, valida el renderizado y límites con Playwright/headless de forma automatizada. NUNCA guardes capturas de pantalla en ./tmp-screenshots/ a menos que el usuario lo solicite explícitamente (para evitar saturar con imágenes el chat de Telegram).
 5. Autocorrección: Si fallan tests, linter, build o pruebas de Playwright, corrígelos antes de dar por terminada la tarea.
 6. Commits: Cuando todo pase en verde, ejecuta git add . y git commit con un mensaje descriptivo.
 7. Renombrado dinámico: Si el usuario te pide cambiar el nombre del proyecto o del grupo de Telegram, escribe únicamente el nuevo título (máximo 35 caracteres, sin saltos de línea) dentro del archivo .telegram-rename en la raíz del proyecto actual.
