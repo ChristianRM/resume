@@ -249,8 +249,45 @@
             white-space: nowrap;
         }
 
+        /* Floating Download Button (Web view only) */
+        .download-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--accent-heading, #2D588B);
+            color: #ffffff !important;
+            padding: 10px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: var(--font-family-sans, Arial, sans-serif);
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+            z-index: 9999;
+        }
+
+        .download-btn:hover {
+            background-color: #1e3c60;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+        }
+
+        .download-btn svg {
+            width: 16px;
+            height: 16px;
+            stroke: #ffffff;
+        }
+
         /* Print adjustments */
         @media print {
+            .no-print, .download-btn {
+                display: none !important;
+            }
+
             body {
                 padding: 0.32in 0.45in;
                 margin: 0;
@@ -518,6 +555,24 @@
             <div class="edu-right">Jul 2015</div>
         </div>
     </section>
+
+    <!-- Floating PDF Download Button (Hidden in Print/PDF export) -->
+    <a id="downloadPdfBtn" href="Christian_Rincon_Resume.pdf" class="download-btn no-print" download="Christian_Rincon_Resume.pdf" title="Download PDF">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>Download PDF</span>
+    </a>
+    <script>
+        const btn = document.getElementById('downloadPdfBtn');
+        if (btn) {
+            btn.addEventListener('click', function() {
+                this.href = 'Christian_Rincon_Resume.pdf?t=' + Date.now();
+            });
+        }
+    </script>
 
 </body>
 
