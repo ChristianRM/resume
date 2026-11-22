@@ -16,7 +16,7 @@
             --text-light: #333333;
             --font-family: 'Georgia', 'Times New Roman', serif;
             --font-family-sans: 'Arial', sans-serif;
-            --spacing-section: 2.5px;
+            --spacing-section: 2px;
         }
 
         @page {
@@ -48,7 +48,7 @@
             width: 8.5in;
             min-height: 11in;
             margin: 16px auto;
-            padding: 0.29in 0.45in;
+            padding: 0.26in 0.45in;
             background: white;
             font-size: 9.3pt;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
@@ -124,7 +124,8 @@
             font-family: var(--font-family-sans);
         }
 
-        .header-right a {
+        .header-right a,
+        .header-right .header-item {
             color: var(--accent-heading);
             text-decoration: none;
             display: flex;
@@ -142,7 +143,7 @@
 
         /* --- SECTIONS --- */
         section {
-            margin-bottom: 4px;
+            margin-bottom: 2.5px;
         }
 
         h2 {
@@ -153,7 +154,7 @@
             border-bottom: 1px solid var(--accent-heading);
             padding-bottom: 1px;
             margin-bottom: 2px;
-            margin-top: 4px;
+            margin-top: 2.5px;
             font-weight: bold;
             letter-spacing: 0.5px;
         }
@@ -300,7 +301,7 @@
 
             body {
                 width: 8.5in !important;
-                padding: 0.29in 0.45in !important;
+                padding: 0.26in 0.45in !important;
                 margin: 0 !important;
                 box-shadow: none !important;
                 border-radius: 0 !important;
@@ -340,7 +341,7 @@
     <header>
         <div class="header-left">
             <h1>Christian Rincon</h1>
-            <div class="subtitle">Senior Software Engineer | Backend & Distributed Systems Architect</div>
+            <div class="subtitle">Senior Software Engineer | Distributed Systems & AI Architect</div>
             <div class="auth-tag">
                 <span class="badge-status">
                     <svg class="auth-icon" viewBox="0 0 24 24">
@@ -350,10 +351,17 @@
                     Work Auth: TN Visa Eligible (USMCA)
                 </span>
                 <span class="badge-sep">•</span>
-                <span class="badge-note">No H-1B Lottery Required (Immediate Cross-Border Hire)</span>
+                <span class="badge-note">No H-1B Lottery Required</span>
             </div>
         </div>
         <div class="header-right">
+            <div class="header-item">
+                <svg class="header-icon" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                Texas (Immediate Relocation) • Coahuila, MX
+            </div>
             <a href="mailto:christian.r.m.job@gmail.com">
                 <svg class="header-icon" viewBox="0 0 24 24">
                     <path
@@ -388,8 +396,6 @@
             re-architecting legacy batch workflows into resilient real-time asynchronous event streams, orchestrating
             low-latency local and cloud inference (<strong>Gemini Flash API, Ollama</strong>), and building declarative
             validation engines for enterprise scale.
-            <strong>TN Visa Eligible (USMCA)</strong> for expedited
-            cross-border hiring without visa lottery delays.
         </p>
     </section>
 
@@ -406,8 +412,9 @@
             </div>
             <ul>
                 <li><strong>Re-architected real-time metadata & ticketing layer</strong> from legacy daily batch
-                    processing to an asynchronous event-driven streaming pipeline, eliminating ingestion bottlenecks and
-                    reducing end-user perceptible latency to <strong>~0 ms</strong>.</li>
+                    processing to an asynchronous event-driven streaming pipeline, slashing metadata ingestion latency
+                    from 24-hour batch cycles to sub-second (<strong>&lt;100ms</strong>) real-time streams, eliminating
+                    ingestion bottlenecks for enterprise operations.</li>
                 <li><strong>Spearheaded core backend engineering in Go (Golang)</strong> and frontend in Angular for a
                     mission-critical enterprise ticketing platform, architecting high-concurrency request handlers and
                     resolving complex distributed system bottlenecks.</li>
@@ -463,17 +470,17 @@
         <div class="experience-item">
             <div class="item-header">
                 <div class="item-title-left">
-                    <span class="company-name">Independent Software Consultant</span> <span class="separator">–</span>
-                    <span class="job-title">Software Engineer & Solutions Developer</span>
+                    <span class="company-name">Independent Software Developer</span> <span class="separator">–</span>
+                    <span class="job-title">Freelance Solutions & Web Development</span>
                 </div>
                 <div class="date-right">Jan 2019 - Apr 2021</div>
             </div>
             <ul>
-                <li><strong>Architected end-to-end data processing pipelines in Python</strong>, integrating
-                    multi-source datasets and training predictive ML models to solve complex business analytics
-                    challenges.</li>
-                <li><strong>Engineered full-stack web applications with JavaScript/Node.js</strong>, deploying
-                    responsive, high-concurrency client solutions with secure REST APIs and optimized database schemas.
+                <li><strong>Developed custom web applications and RESTful backend services</strong> for independent
+                    clients using JavaScript (Node.js/Express) and relational databases, ensuring responsive UI and
+                    secure data handling.</li>
+                <li><strong>Automated data processing workflows and reporting scripts in Python</strong>, eliminating
+                    repetitive manual data entry and optimizing business operations for small business clients.
                 </li>
             </ul>
         </div>
@@ -559,7 +566,7 @@
         <div class="education-item">
             <div class="edu-left"><strong>Universidad Autónoma de Coahuila</strong> <span
                     style="color:var(--text-dark)">– M.S. Computer Science (Coursework Completed)</span></div>
-            <div class="edu-right">Dec 2018</div>
+            <div class="edu-right">Jan 2017 – Dec 2018</div>
         </div>
         <div class="education-item">
             <div class="edu-left"><strong>Universidad Autónoma de Coahuila</strong> <span
