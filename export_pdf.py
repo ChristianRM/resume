@@ -6,7 +6,15 @@ import pypdf
 def main():
     root_dir = Path(__file__).resolve().parent
     html_file = root_dir / "index.html"
-    pdf_file = root_dir / "Christian_Rincon_Resume.pdf"
+    
+    # Target PDF filename can be provided as argv[1]
+    target_name = "Christian_Rincon_Resume.pdf"
+    for arg in sys.argv[1:]:
+        if not arg.startswith("--") and arg.endswith(".pdf"):
+            target_name = arg
+            break
+            
+    pdf_file = root_dir / target_name
     screenshot_dir = root_dir / "tmp-screenshots"
     screenshot_dir.mkdir(exist_ok=True)
     screenshot_file = screenshot_dir / "resume_preview.png"
